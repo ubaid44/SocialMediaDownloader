@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Login Page</title>
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-    </head>
-    <body class="d-flex justify-content-center align-items-center vh-100 bg-light">
-        <div class="p-4 shadow rounded w-25">
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+
+    <div class="p-4 shadow rounded w-25">
         <h1 class="text-center mb-4">Login</h1>
-        
-            <input type="text" class="form-control mb-3 w-100" placeholder="Email">
-            <input type="password" class="form-control mb-3 w-100" placeholder="password">
-            <a href="main.html"><button class="btn btn-primary w-100">Login</button></a>
-        </div>
-    </body>
+
+        <input type="text" id="username" class="form-control mb-3" placeholder="Username">
+        <input type="password" id="password" class="form-control mb-3" placeholder="Password">
+
+        <button class="btn btn-primary w-100" onclick="login()">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            let user = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if (user === "Ubaid" && pass === "12345678") {
+                window.location.href = "main.html";
+            } else {
+                alert("O bhai! Username ya password ghalat hai 🤡");
+            }
+        }
+    </script>
+
+</body>
 </html>
